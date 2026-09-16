@@ -2,19 +2,19 @@ Feature: The Internet
   This feature covers (some) Example pages on 'the-internet.herokuapp.com'
 
   @TEST_TI_0001
-  Scenario: Homepage has a list of links to Expected examples
-    Given the page under test is 'https://the-internet.herokuapp.com'
-    And an example Home Page step
-    And add other steps
+  Scenario: Homepage has a list of available examples
+    Given Page under test is 'https://the-internet.herokuapp.com'
+    When I check the list of available examples
+    Then The available examples should match the expected list exactly
 
-#  @TEST_TI_0001
-#  Scenario: Basic Auth allows validated access
-#    Given the page under test is 'https://the-internet.herokuapp.com'
-#    When the 'Basic Auth' example is opened
-#    And valid credentials are supplied
-#    Then Congratulations should be displayed
-#
-#  @TEST_TI_0001
-#  Scenario: Sortable Data Tables - Example 1 displays the expected 4 results
-#    Given the page under test is 'Sortable Data Tables'
-#    And add other steps
+  @TEST_TI_0002
+  Scenario: Basic authentication allows validated access
+    Given Ready to access basic authentication
+    When I access the basic authentication page with valid credentials
+    Then Congratulations should be displayed
+
+  @TEST_TI_0003
+  Scenario: Example 1 displays the 4 expected results
+    Given Access sortable data table through 'https://the-internet.herokuapp.com/tables'
+    When I check the data of Example 1 table
+    Then Example 1 should display the 4 expected results

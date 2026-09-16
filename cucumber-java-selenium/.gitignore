@@ -2,4 +2,5 @@
 *.iml
 
 target/
-*.versionsBackup
+*.versionsBackup.DS_Store
+.DS_Store

@@ -1,0 +1,52 @@
+package io.cucumber.testdata;
+
+import java.util.List;
+
+public class ExpectedLinks {
+    public static final List<String> LINK = List.of(
+            "A/B Testing",
+            "Add/Remove Elements",
+            "Basic Auth",
+            "Broken Images",
+            "Challenging DOM",
+            "Checkboxes",
+            "Context Menu",
+            "Digest Authentication",
+            "Disappearing Elements",
+            "Drag and Drop",
+            "Dropdown",
+            "Dynamic Content",
+            "Dynamic Controls",
+            "Dynamic Loading",
+            "Entry Ad",
+            "Exit Intent",
+            "File Download",
+            "File Upload",
+            "Floating Menu",
+            "Forgot Password",
+            "Form Authentication",
+            "Frames",
+            "Geolocation",
+            "Horizontal Slider",
+            "Hovers",
+            "Infinite Scroll",
+            "Inputs",
+            "JavaScript Alerts",
+            "JavaScript onload event error",
+            "JQuery UI Menus",
+            "Key Presses",
+            "Large & Deep DOM",
+            "Multiple Windows",
+            "Nested Frames",
+            "Notification Messages",
+            "Redirect Link",
+            "Secure File Download",
+            "Shadow DOM",
+            "Shifting Content",
+            "Slow Resources",
+            "Sortable Data Tables",
+            "Status Codes",
+            "Typos",
+            "WYSIWYG Editor"
+    );
+}
