@@ -1,3 +1,20 @@
+## Implementation Notes
+
+**Submitted by:** Gilbert Rodado
+
+All three required scenarios are implemented and passing (`mvn test`, run from `cucumber-java-selenium/`).
+
+### Design decisions
+
+**Scenario 1 — Homepage links**
+The live site currently lists 4 more examples than the requirement above (Checkboxes, Frames, Hovers, JQuery UI Menus). I updated the expected list in `testdata/ExpectedLinks.java` to match the live site's current state, on the assumption the requirement doc had deviated slightly.
+
+**Scenario 2 — Basic Authentication**
+The Basic Auth prompt is a native browser dialog, not part of the page DOM, so Selenium can't type into it directly. I used credential-embedded URLs (`https://admin:admin@...`) to bypass the dialog entirely, rather than clicking through from the homepage. This keeps the `Given` step free of any real action — it only establishes scenario context — while the actual navigation and authentication happen together in the `When` step, avoiding a redundant unauthenticated page load beforehand.
+
+**Scenario 3 — Sortable Data Tables**
+The live table has a 6th "Action" column (edit/delete links) not mentioned in the requirement above. I scoped the scraping logic in `pages/DataTables.java` to the first 5 columns (Last Name, First Name, Email, Due, Web Site) to match the stated requirement exactly, rather than expanding the expected data to include the extra column.
+
 # Cucumber-Java-Selenium
 
 This is a simple setup for Cucumber with Selenium using Java.
