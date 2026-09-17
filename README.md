@@ -15,6 +15,10 @@ The Basic Auth prompt is a native browser dialog, not part of the page DOM, so S
 **Scenario 3 — Sortable Data Tables**
 The live table has a 6th "Action" column (edit/delete links) not mentioned in the requirement above. I scoped the scraping logic in `pages/DataTables.java` to the first 5 columns (Last Name, First Name, Email, Due, Web Site) to match the stated requirement exactly, rather than expanding the expected data to include the extra column.
 
+### Additional note
+
+While working through this, I also built out an equivalent Cucumber/Playwright/JS implementation to solidify my understanding of the underlying BDD and automation concepts before translating them to Java/Selenium.
+
 # Cucumber-Java-Selenium
 
 This is a simple setup for Cucumber with Selenium using Java.
