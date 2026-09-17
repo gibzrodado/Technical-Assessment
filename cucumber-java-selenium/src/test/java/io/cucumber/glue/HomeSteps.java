@@ -22,7 +22,7 @@ public class HomeSteps extends Context {
     Home homePage = (Home) getTestStash().get("homePage");
     List<String> actualLinks = homePage.getLinkTexts();
     stash("actualLinks", actualLinks);
-    System.out.println("printing shared stash :" + getTestStash().toString());
+    System.out.println("Actual links found:" + actualLinks);
   }
 
   @Then("The available examples should match the expected list exactly")
